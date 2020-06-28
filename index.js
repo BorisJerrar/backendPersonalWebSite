@@ -48,6 +48,7 @@ app.post('/send', (req, res, next) => {
     transporter.sendMail(mail, (err, data) => {
       if (err) {
         res.json({
+          err,
           msg: 'fail'
         })
       } else {
