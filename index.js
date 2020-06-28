@@ -9,6 +9,8 @@ app.use(express.json());
 const router = express.Router();
 app.use(router);
 
+const port = process.env.PORT || 3002
+
 var transport = {
   host: 'ns0.ovh.net',
   port: 587,
@@ -56,4 +58,4 @@ app.post('/send', (req, res, next) => {
     })
   })
 
-  app.listen(3002)
+  app.listen(port)
