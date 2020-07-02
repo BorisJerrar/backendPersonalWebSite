@@ -49,11 +49,11 @@ app.post('/send', (req, res, next) => {
       if (err) {
         res.json({
           err,
-          msg: 'fail'
+          error: 'fail'
         })
       } else {
         res.json({
-          msg: 'success'
+          success: 'success'
         })
       }
     })
